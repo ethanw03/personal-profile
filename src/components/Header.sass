@@ -1,0 +1,38 @@
+.headerPage
+  text-align: center
+  height: 100vw
+  font-family: 'Roboto Condensed', sans-serif
+
+  h1, h3
+    margin: 0
+
+  h1 + h1
+    margin-top: -0.5rem
+
+.buttonContainer
+  display: flex
+  justify-content: center
+  margin-top: 1rem
+
+  button
+    background-color: #000
+    color: #fff
+    border: none
+    padding: 0.5rem 1rem
+    margin: 0 0.5rem
+    font-family: 'Roboto Condensed', sans-serif
+    cursor: pointer
+    transition: background-color 0.3s, color 0.3s
+
+    &:hover
+      background-color: #333
+
+.headerPage.dark
+  color: #fff
+
+.headerPage.dark button
+  background-color: #fff
+  color: #000
+
+  &:hover
+    background-color: #ccc

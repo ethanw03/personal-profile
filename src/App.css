@@ -1,5 +1,18 @@
-* {
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	background-color: #f5f5f5;
 	color: black;
 	font-family: 'Roboto Condensed', sans-serif;
+	min-height: 100vh;
+}
+
+.App.dark {
+	background-color: #000;
+	color: #fff;
+}
+
+.headerPage.dark {
+	color: #fff;
 }

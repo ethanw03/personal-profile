@@ -1,25 +1,17 @@
 import React, { useState } from 'react';
 import './Navbar.sass';
 
-const Navbar = () => {
-	const [darkMode, setDarkMode] = useState(false);
-
-	const toggleDarkMode = () => {
-		setDarkMode(!darkMode);
-	};
-
+const Navbar = ({ darkMode, toggleDarkMode }) => {
 	return (
-		<nav className='navbar'>
+		<nav className={darkMode ? 'navbar dark' : 'navbar'}>
 			<div className='leftContainer'>
 				<label className='switch'>
 					<input type='checkbox' checked={darkMode} onChange={toggleDarkMode} />
 					<span className='slider'></span>
 				</label>
 			</div>
-			<div className='rightContainer'>
-				<a href='#'>About</a>
-				<a href='#'>Projects</a>
-				<a href='#'>Contact me</a>
+			<div class='centerContainer'>
+				<h2>ENW</h2>
 			</div>
 		</nav>
 	);
