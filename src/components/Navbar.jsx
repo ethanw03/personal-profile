@@ -10,9 +10,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 					<span className='slider'></span>
 				</label>
 			</div>
-			<div class='centerContainer'>
-				<h2>ENW</h2>
-			</div>
+			<div class='centerContainer'></div>
 		</nav>
 	);
 };

@@ -1,7 +1,17 @@
 .headerPage
-  text-align: center
-  height: 100vw
+  text-align: left
+  height: 100vh
   font-family: 'Roboto Condensed', sans-serif
+  position: relative
+
+  h1
+    font-size: 72px
+
+  h3
+    font-size: 42px
+    font-family: 'Libre Franklin', sans-serif
+    
+    
 
   h1, h3
     margin: 0
@@ -9,23 +19,31 @@
   h1 + h1
     margin-top: -0.5rem
 
-.buttonContainer
-  display: flex
-  justify-content: center
-  margin-top: 1rem
+  .buttonContainer
+    display: flex
+    position: absolute
+    left: -3px
+    margin-top: 1.5rem
 
-  button
-    background-color: #000
-    color: #fff
-    border: none
-    padding: 0.5rem 1rem
-    margin: 0 0.5rem
-    font-family: 'Roboto Condensed', sans-serif
-    cursor: pointer
-    transition: background-color 0.3s, color 0.3s
+    button
+      background-color: #000
+      color: #fff
+      border: none
+      padding: .4rem 2rem
+      margin: 0 0.5rem
+      
+      font-family: 'Libre Franklin', sans-serif;
+      cursor: pointer
+      transition: background-color 0.3s, color 0.3s
+      border-radius: .1rem
 
-    &:hover
-      background-color: #333
+      &:hover
+        background-color: #333
+
+.headerContent
+  position: absolute
+  top: 350px
+  left: 100px
 
 .headerPage.dark
   color: #fff

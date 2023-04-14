@@ -2,24 +2,20 @@
   display: flex
   justify-content: space-between
   align-items: center
-  padding: 10px
-  background-color: #f8f9fa
+  padding: 40px
+  padding-right: 50px
+  background-color: transparent
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1000
 
-.leftContainer,
-.centerContainer,
-.rightContainer
-  display: flex
-  align-items: center
-
+.leftContainer
+  margin-left: auto
 
 .centerContainer h2
-  position: fixed
   margin: 0
-
-.rightContainer a
-  text-decoration: none
-  color: #343a40
-  margin-left: 20px
 
 .switch
   position: relative
@@ -39,7 +35,7 @@
   left: 0
   right: 0
   bottom: 0
-  background-color: #ccc
+  background-color: black
   transition: 0.4s
 
 .slider:before
@@ -53,20 +49,17 @@
   transition: 0.4s
 
 input:checked + .slider
-  background-color: #2196f3
+  background-color: black
 
 input:checked + .slider:before
   transform: translateX(26px)
+  background-color: white
 
 .navbar.dark
-  background-color: #000
   color: #f5f5f5
 
-.navbar.dark a
-  color: #f5f5f5
-  
 .navbar.dark .slider
-  background-color: #444
+  background-color: white
 
-.navbar.dark input:checked + .slider
-  background-color: #bbb
+.navbar.dark input:checked + .slider:before
+  background-color: black
