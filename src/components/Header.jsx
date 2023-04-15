@@ -1,5 +1,12 @@
 import React from 'react';
 import './Header.sass';
+import {
+	HideBetween,
+	HideDuring,
+	HideOn,
+	HideScroll,
+} from 'react-hide-on-scroll';
+import { Link } from 'react-scroll';
 
 function Header({ darkMode }) {
 	return (
@@ -8,11 +15,27 @@ function Header({ darkMode }) {
 				<h1>ETHAN</h1>
 				<h1>NICHOLAS WONG</h1>
 				<h3>Full-Stack Software Developer</h3>
-				<div className='buttonContainer'>
-					<button>About</button>
-					<button>Projects</button>
-					<button>Contact me</button>
-				</div>
+				<HideOn height={950}>
+					<div className='buttonContainer'>
+						<Link
+							to='aboutPage'
+							spy={true}
+							smooth={true}
+							offset={50}
+							duration={500}>
+							<button>About</button>
+						</Link>
+						<a>
+							<button>Skills</button>
+						</a>
+						<a>
+							<button>Projects</button>
+						</a>
+						<a>
+							<button>Contact</button>
+						</a>
+					</div>
+				</HideOn>
 			</div>
 		</div>
 	);

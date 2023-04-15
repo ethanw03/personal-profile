@@ -3,7 +3,7 @@
   justify-content: space-between
   align-items: center
   padding: 40px
-  padding-right: 50px
+  padding-right: 100px
   background-color: transparent
   position: fixed
   top: 0
@@ -63,3 +63,24 @@ input:checked + .slider:before
 
 .navbar.dark input:checked + .slider:before
   background-color: black
+
+.buttonContainer
+    display: flex
+    position: absolute
+    right: 169px
+    margin-top: 1.5 rem
+
+    button
+      background-color: #000
+      color: #fff
+      border: none
+      padding: .57rem 2rem
+      margin: 0 0.5rem
+      
+      font-family: 'Libre Franklin', sans-serif;
+      cursor: pointer
+      transition: background-color 0.3s, color 0.3s
+      border-radius: .1rem
+
+      &:hover
+        background-color: #333
