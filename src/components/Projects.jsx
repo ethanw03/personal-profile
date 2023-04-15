@@ -1,4 +1,5 @@
 import React from 'react';
+import './Projects.sass';
 
 function Projects(darkMode) {
 	return (

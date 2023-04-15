@@ -25,15 +25,30 @@ function Header({ darkMode }) {
 							duration={500}>
 							<button>About</button>
 						</Link>
-						<a>
+						<Link
+							to='skillsPage'
+							spy={true}
+							smooth={true}
+							offset={50}
+							duration={500}>
 							<button>Skills</button>
-						</a>
-						<a>
+						</Link>
+						<Link
+							to='projectsPage'
+							spy={true}
+							smooth={true}
+							offset={50}
+							duration={500}>
 							<button>Projects</button>
-						</a>
-						<a>
+						</Link>
+						<Link
+							to='aboutPage'
+							spy={true}
+							smooth={true}
+							offset={50}
+							duration={500}>
 							<button>Contact</button>
-						</a>
+						</Link>
 					</div>
 				</HideOn>
 			</div>

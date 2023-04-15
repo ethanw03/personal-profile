@@ -1,4 +1,5 @@
 import React from 'react';
+import './Skills.sass';
 
 function Skills({ darkMode }) {
 	return (

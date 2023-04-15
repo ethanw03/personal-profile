@@ -6,7 +6,7 @@
   padding-right: 100px
   background-color: transparent
   position: fixed
-  top: 0
+  top: 15px
   left: 0
   right: 0
   z-index: 1000
@@ -30,6 +30,7 @@
 
 .slider
   position: absolute
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   cursor: pointer
   top: 0
   left: 0
@@ -71,16 +72,23 @@ input:checked + .slider:before
     margin-top: 1.5 rem
 
     button
-      background-color: #000
-      color: #fff
+      background-color: transparent
+      color: #000
       border: none
       padding: .57rem 2rem
       margin: 0 0.5rem
-      
+      opacity: .8
+     
       font-family: 'Libre Franklin', sans-serif;
       cursor: pointer
       transition: background-color 0.3s, color 0.3s
       border-radius: .1rem
 
       &:hover
-        background-color: #333
+        background-color: transparent
+        transition: background-color .7s ease-out 100ms
+        opacity: 1
+
+.navbar.dark button
+  background-color: #000
+  color: #fff

@@ -6,16 +6,53 @@ import {
 	HideOn,
 	HideScroll,
 } from 'react-hide-on-scroll';
+import { Link } from 'react-scroll';
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
 	return (
 		<nav className={darkMode ? 'navbar dark' : 'navbar'}>
 			<HideBetween height startHeight={0} endHeight={620}>
 				<div className='buttonContainer'>
-					<button>About</button>
-					<button>Skills</button>
-					<button>Projects</button>
-					<button>Contact</button>
+					<Link
+						to='headerPage'
+						spy={true}
+						smooth={true}
+						offset={50}
+						duration={500}>
+						<button>Home</button>
+					</Link>
+					<Link
+						to='aboutPage'
+						spy={true}
+						smooth={true}
+						offset={50}
+						duration={500}>
+						<button>About</button>
+					</Link>
+					<Link
+						to='skillsPage'
+						spy={true}
+						smooth={true}
+						offset={50}
+						duration={500}>
+						<button>Skills</button>
+					</Link>
+					<Link
+						to='projectsPage'
+						spy={true}
+						smooth={true}
+						offset={50}
+						duration={500}>
+						<button>Projects</button>
+					</Link>
+					<Link
+						to='contactPage'
+						spy={true}
+						smooth={true}
+						offset={50}
+						duration={500}>
+						<button>Contact</button>
+					</Link>
 				</div>
 			</HideBetween>
 			<div className='leftContainer'>
