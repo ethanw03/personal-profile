@@ -4,7 +4,9 @@ import './Projects.sass';
 function Projects(darkMode) {
 	return (
 		<div className='projectsPage'>
-			<h1>PROJECTS</h1>
+			<div className='projectsContent'>
+				<h1>PROJECTS</h1>
+			</div>
 		</div>
 	);
 }

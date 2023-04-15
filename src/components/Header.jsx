@@ -7,6 +7,7 @@ import {
 	HideScroll,
 } from 'react-hide-on-scroll';
 import { Link } from 'react-scroll';
+import Typewriter from 'typewriter-effect';
 
 function Header({ darkMode }) {
 	return (
@@ -14,14 +15,29 @@ function Header({ darkMode }) {
 			<div className='headerContent'>
 				<h1>ETHAN</h1>
 				<h1>NICHOLAS WONG</h1>
-				<h3>Full-Stack Software Developer</h3>
-				<HideOn height={950}>
+				<Typewriter
+					options={{
+						strings: [
+							'Full-Stack Software Developer',
+							'Creative',
+							'Front-End Developer',
+							'Back-End Developer',
+						],
+						autoStart: true,
+						loop: true,
+						delay: 30,
+						wrapperClassName: 'typeWriterText',
+						cursorClassName: 'typeWriterCursor',
+						cursor: '',
+					}}
+				/>
+				<HideOn height={875}>
 					<div className='buttonContainer'>
 						<Link
 							to='aboutPage'
 							spy={true}
 							smooth={true}
-							offset={50}
+							offset={0}
 							duration={500}>
 							<button>About</button>
 						</Link>
@@ -29,7 +45,7 @@ function Header({ darkMode }) {
 							to='skillsPage'
 							spy={true}
 							smooth={true}
-							offset={50}
+							offset={0}
 							duration={500}>
 							<button>Skills</button>
 						</Link>
@@ -37,7 +53,7 @@ function Header({ darkMode }) {
 							to='projectsPage'
 							spy={true}
 							smooth={true}
-							offset={50}
+							offset={0}
 							duration={500}>
 							<button>Projects</button>
 						</Link>
@@ -45,7 +61,7 @@ function Header({ darkMode }) {
 							to='aboutPage'
 							spy={true}
 							smooth={true}
-							offset={50}
+							offset={0}
 							duration={500}>
 							<button>Contact</button>
 						</Link>

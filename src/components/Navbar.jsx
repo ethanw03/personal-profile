@@ -11,13 +11,13 @@ import { Link } from 'react-scroll';
 const Navbar = ({ darkMode, toggleDarkMode }) => {
 	return (
 		<nav className={darkMode ? 'navbar dark' : 'navbar'}>
-			<HideBetween height startHeight={0} endHeight={620}>
+			<HideBetween height startHeight={0} endHeight={825}>
 				<div className='buttonContainer'>
 					<Link
 						to='headerPage'
 						spy={true}
 						smooth={true}
-						offset={50}
+						offset={0}
 						duration={500}>
 						<button>Home</button>
 					</Link>
@@ -25,7 +25,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 						to='aboutPage'
 						spy={true}
 						smooth={true}
-						offset={50}
+						offset={0}
 						duration={500}>
 						<button>About</button>
 					</Link>
@@ -33,7 +33,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 						to='skillsPage'
 						spy={true}
 						smooth={true}
-						offset={50}
+						offset={0}
 						duration={500}>
 						<button>Skills</button>
 					</Link>
@@ -41,7 +41,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 						to='projectsPage'
 						spy={true}
 						smooth={true}
-						offset={50}
+						offset={0}
 						duration={500}>
 						<button>Projects</button>
 					</Link>
@@ -49,7 +49,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 						to='contactPage'
 						spy={true}
 						smooth={true}
-						offset={50}
+						offset={0}
 						duration={500}>
 						<button>Contact</button>
 					</Link>

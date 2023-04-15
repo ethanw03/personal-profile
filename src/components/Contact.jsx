@@ -4,7 +4,9 @@ import './Contact.sass';
 function Contact() {
 	return (
 		<div className='contactPage'>
-			<h1>CONTACT</h1>
+			<div className='contactContent'>
+				<h1>CONTACT</h1>
+			</div>
 		</div>
 	);
 }
