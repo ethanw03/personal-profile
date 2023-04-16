@@ -1,11 +1,6 @@
 import React from 'react';
 import './Header.sass';
-import {
-	HideBetween,
-	HideDuring,
-	HideOn,
-	HideScroll,
-} from 'react-hide-on-scroll';
+import { HideOn } from 'react-hide-on-scroll';
 import { Link } from 'react-scroll';
 import Typewriter from 'typewriter-effect';
 

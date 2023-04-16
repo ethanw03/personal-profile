@@ -11,9 +11,8 @@ function About({ darkMode }) {
 				<p>
 					Hello, I am a full-stack developer based out of British Columbia,
 					Canada. <br />I have a passion for creating clean and functional web
-					applications. My interests <br /> fall in learning new technologies. I
-					am always looking for new challenges. <br />
-					Most importantly though... I love what I do!
+					applications. My interests <br /> fall in learning new technologies
+					and I am always looking for new challenges. <br />
 				</p>
 			</div>
 		</div>

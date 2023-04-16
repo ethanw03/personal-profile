@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import Mail from './Mail';
+import emailjs from 'emailjs-com';
 
 function Contact() {
 	const [formData, setFormData] = useState({
@@ -12,14 +13,26 @@ function Contact() {
 		message: '',
 	});
 
+	const emailjsUserId = 'w87Qch3HxGUtcktOJ';
+
 	const handleChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(formData);
-		// Send formData to your backend or API
+
+		emailjs
+			.sendForm('default_service', 'template_a9sz3wo', e.target, emailjsUserId)
+			.then(
+				(result) => {
+					console.log('SUCCESS!', result.status, result.text);
+					handleMailClick();
+				},
+				(error) => {
+					console.log('FAILED...', error);
+				}
+			);
 	};
 
 	const handleMailClick = () => {
@@ -36,17 +49,24 @@ function Contact() {
 			<div className='contactContent'>
 				<h1>CONTACT</h1>
 			</div>
+			<div className='holder'></div>
 			<div className='container'>
 				<div className='contact-info'>
-					<p>
-						<FontAwesomeIcon icon={faLinkedin} />
-					</p>
-					<p>
-						<FontAwesomeIcon icon={faFile} />
-					</p>
-					<p>
-						<FontAwesomeIcon icon={faGithub} />
-					</p>
+					<a className='iconlinks' href='#' target='_blank'>
+						<p>
+							<FontAwesomeIcon icon={faLinkedin} />
+						</p>
+					</a>
+					<a className='iconlinks' href='#' target='_blank'>
+						<p>
+							<FontAwesomeIcon icon={faGithub} />
+						</p>
+					</a>
+					<a className='iconlinks' href='#' target='_blank'>
+						<p>
+							<FontAwesomeIcon icon={faFile} />
+						</p>
+					</a>
 				</div>
 				<div className='divider'></div>
 				<form className='contact-form' onSubmit={handleSubmit}>
@@ -66,7 +86,10 @@ function Contact() {
 						onChange={handleChange}
 						required
 					/>
+
 					<textarea
+						className='messageField'
+						rows='10'
 						name='message'
 						placeholder='Leave me a message!'
 						value={formData.message}

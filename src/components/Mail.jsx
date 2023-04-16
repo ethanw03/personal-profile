@@ -6,7 +6,7 @@ function Mail() {
 		<div class='frame'>
 			<input type='checkbox' id='chck' />
 			<label for='chck' class='button'>
-				MAIL
+				send
 			</label>
 			<label for='chck' class='button reset'>
 				Reset
