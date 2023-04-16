@@ -48,6 +48,8 @@
   bottom: 4px
   background-color: white
   transition: 0.4s
+  
+  
 
 input:checked + .slider
   background-color: black
@@ -83,13 +85,15 @@ input:checked + .slider:before
       font-size: 28px
       font-family: 'Libre Franklin', sans-serif;
       cursor: pointer
-      transition: background-color 0.3s, color 0.3s
+      transition: translate 0.7s, scale 0.2s
       border-radius: .1rem
 
       &:hover
         background-color: transparent
-        transition: background-color .7s ease-out 100ms
+        
         opacity: 1
+        transform: translate(0, -5px) scale(1.02)
+
 
 .navbar.dark button
   background-color: #000
