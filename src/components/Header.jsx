@@ -58,7 +58,7 @@ function Header({ darkMode }) {
 							<button>Projects</button>
 						</Link>
 						<Link
-							to='aboutPage'
+							to='contactPage'
 							spy={true}
 							smooth={true}
 							offset={0}

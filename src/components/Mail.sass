@@ -1,0 +1,122 @@
+.circle
+  position: absolute
+  width: 200px
+  height: 200px
+  top: 65px
+  left: 100px
+  background: transparent
+  border-radius: 50%
+  
+.circle-outer
+  position: absolute
+  border-radius: 50%
+  width: 200px
+  height: 200px
+  top: 65px
+  left: 100px
+  box-sizing: border-box
+  background: none
+  
+  
+.icon
+  position: absolute
+  z-index: 2
+  top: 130px
+  left: 140px
+  fill: none
+  stroke-width: 2px
+  stroke: black
+  stroke-linecap: round
+  stroke-dasharray: 325 325
+  
+.mail
+  width: 120px
+  height: 70px
+  stroke-dashoffset: 0
+  
+.plane
+  width: 120px
+  height: 110px	
+  stroke-dashoffset: 325
+  
+.button
+  position: absolute
+  z-index: 10
+  width: 200px
+  height: 40px
+  top: 535px
+  left: 100px
+  background: transparent
+  color: black
+  text-align: center
+  line-height: 40px
+  border-radius: 20px
+  
+  text-transform: uppercase
+  font-size: 30px
+  cursor: pointer
+  
+  border: 2px solid black
+  
+  &:hover
+    background: transparent
+    color: black
+  
+  &.reset
+    opacity: 0
+    z-index: 5
+  
+#chck
+  display: none
+  
+#chck:checked ~ .button
+  animation: button 1.5s ease-in-out 1.7s
+  animation-fill-mode: both
+  
+#chck:checked ~ .reset
+  animation: reset 1s ease-in-out 3.7s
+  animation-fill-mode: both
+  
+#chck:checked ~ .circle
+  animation: circle 1s ease-in-out
+  animation-fill-mode: both
+  
+#chck:checked ~ .circle-outer
+  animation: circle .8s ease-in-out .2s
+  animation-fill-mode: both
+  
+#chck:checked ~ .mail
+  stroke-dashoffset: 326
+  transition: stroke-dashoffset 1s ease-in-out
+  
+#chck:checked ~ .plane
+  stroke-dashoffset: 0
+  transition: stroke-dashoffset 1s ease-in-out .6s
+  animation: fly 2.4s ease-in-out
+  animation-fill-mode: both
+  
+@keyframes fly
+  0%, 50%
+    transform: translate3d(0,0,0) scale(1)
+    
+  60%
+    transform: translate3d(-10px,5px,0) scale(1.05)
+    
+  70%
+    opacity: 1
+    
+  85%
+    opacity: 0
+    
+  100%
+    transform: translate3d(300px,-150px,0) scale(0.4)
+    opacity: 0
+    
+@keyframes circle
+  0%
+    transform: translate3d(0,0,0) scale(1)
+    
+  20%
+    transform: scale(1.1)
+    
+  100%

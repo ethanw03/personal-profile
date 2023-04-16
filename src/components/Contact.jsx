@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './Contact.sass';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFile } from '@fortawesome/free-solid-svg-icons';
+import Mail from './Mail';
 
 function Contact() {
 	const [formData, setFormData] = useState({
@@ -18,6 +22,15 @@ function Contact() {
 		// Send formData to your backend or API
 	};
 
+	const handleMailClick = () => {
+		// Trigger the animation for the send button
+		const sendButton = document.querySelector('.button');
+		sendButton.classList.add('sent');
+
+		// Clear the form inputs
+		setFormData({ name: '', email: '', message: '' });
+	};
+
 	return (
 		<div className='contactPage'>
 			<div className='contactContent'>
@@ -25,11 +38,15 @@ function Contact() {
 			</div>
 			<div className='container'>
 				<div className='contact-info'>
-					<p>Ethan N. Wong</p>
-					<p>ethanwong98@yahoo.ca</p>
-					<p>LinkedIn</p>
-					<p>Creddle</p>
-					<p>Github</p>
+					<p>
+						<FontAwesomeIcon icon={faLinkedin} />
+					</p>
+					<p>
+						<FontAwesomeIcon icon={faFile} />
+					</p>
+					<p>
+						<FontAwesomeIcon icon={faGithub} />
+					</p>
 				</div>
 				<div className='divider'></div>
 				<form className='contact-form' onSubmit={handleSubmit}>
@@ -51,11 +68,14 @@ function Contact() {
 					/>
 					<textarea
 						name='message'
-						placeholder='Message'
+						placeholder='Leave me a message!'
 						value={formData.message}
 						onChange={handleChange}
 						required></textarea>
-					<button type='submit'>Submit</button>
+
+					<div className='sendMail' onClick={handleMailClick}>
+						<Mail />
+					</div>
 				</form>
 			</div>
 		</div>
