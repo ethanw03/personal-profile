@@ -16,11 +16,21 @@ import {
 } from 'react-icons/si';
 
 import schedulerPNG from '../assets/scheduler.png';
+import betterPNG from '../assets/better.png';
+import tweeterPNG from '../assets/tweeter.png';
+import junglePNG from '../assets/Jungle.png';
 
-const ImageCarousel = () => {
+const ImageCarousel = ({ darkMode }) => {
 	const images = [
 		{
-			src: 'https://via.placeholder.com/800x400',
+			src: junglePNG,
+			title: 'JUNGLE ',
+			description:
+				'A E-Commerce site for selling exotic flora. Uses Stripe for payments and has basic user authentication for admin roles. ',
+			techStack: [<FaGem />, <SiRubyonrails />, <SiWebpack />, <SiSass />],
+		},
+		{
+			src: betterPNG,
 			title: 'BETTER',
 			description:
 				'An app built to assist users in building better habits! It takes in a users requested goals and daily check-ins to display data and give users feedback.',
@@ -33,7 +43,7 @@ const ImageCarousel = () => {
 			],
 		},
 		{
-			src: 'https://via.placeholder.com/800x400',
+			src: tweeterPNG,
 			title: 'TWEETER',
 			description:
 				'A single page twitter app clone. This app passes data to and from a database in order to dynamically display tweets posted.',
@@ -52,17 +62,10 @@ const ImageCarousel = () => {
 				<FaDatabase />,
 			],
 		},
-		{
-			src: 'https://via.placeholder.com/800x400',
-			title: 'JUNGLE ',
-			description:
-				'A E-Commerce site for selling exotic flora. Uses Stripe for payments and has basic user authentication for admin roles. ',
-			techStack: [<FaGem />, <SiRubyonrails />, <SiWebpack />, <SiSass />],
-		},
 	];
 
 	return (
-		<div className='carousel-wrapper'>
+		<div className={`carousel-wrapper ${darkMode ? 'dark-mode' : ''}`}>
 			<Carousel
 				showArrows={true}
 				showStatus={false}
