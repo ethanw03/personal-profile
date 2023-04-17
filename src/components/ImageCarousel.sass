@@ -4,6 +4,7 @@
   align-items: center
   height: 100vh
   width: 100%
+  border-radius: 10px;
   
   .custom-carousel
     width: 50%
@@ -11,7 +12,7 @@
 .carousel-slide
   position: relative
   
-  
+
   img
     width: 100%
     height: auto
@@ -24,7 +25,7 @@
     width: 100%
     height: 100%
     background: rgba(0, 0, 0, 0.5)
-    
+    color: white
     padding: 1rem
     box-sizing: border-box
     transition: opacity 0.3s
@@ -38,12 +39,15 @@
       position: absolute
       top: 2.5rem
       right: 4rem
+      
+      span:hover
+        transform: scale(1.1)
 
     .description
       width: 50%
       display: inline-block
       margin-top: 1rem
-      font-size: 0.9rem
+      font-size: 1.4rem
       margin-top: 150px
       
       word-wrap: break-word
@@ -52,7 +56,7 @@
       position: absolute
       bottom: 1rem
       left: 4rem
-      font-size: 1.5rem
+      font-size: 1.3rem
       font-weight: bold
 
   &:hover
@@ -65,59 +69,11 @@
     width: 10px
     height: 10px
     border-radius: 50%
-    background-color: transparent
+    background-color: black
     border: 1px solid black
     box-shadow: none
 
   .carousel-indicator-selected
     background-color: black
-    
-.dark-mode
-  .overlay
-    background: rgba(255, 255, 255, 0.5)
-    color: black
 
-  .tech-icons
-    color: black
-
-  .title
-    color: black
-
-  .description
-    color: black
-    a
-      color: white
-      text-decoration: underline
-      &:hover
-        color: white
-        text-decoration: none
-      
-  .github-link
-    color: black
-    &:hover
-      color: white
-
-.light-mode
-  .overlay
-    background: rgba(0, 0, 0, 0.5)
-    color: white
-
-  .tech-icons
-    color: white
-
-  .title
-    color: white
-
-  .description
-    color: white
-    a
-      color: black
-      text-decoration: underline
-      &:hover
-        color: black
-        text-decoration: none
-      
-  .github-link
-    color: white
-    &:hover
-      color: black
+  

@@ -27,7 +27,36 @@ const ImageCarousel = ({ darkMode }) => {
 			title: 'JUNGLE ',
 			description:
 				'A E-Commerce site for selling exotic flora. Uses Stripe for payments and has basic user authentication for admin roles. ',
-			techStack: [<FaGem />, <SiRubyonrails />, <SiWebpack />, <SiSass />],
+			techStack: [
+				<a
+					className='techstackIcons'
+					href='/'
+					target='_blank'
+					rel='noopener noreferrer'>
+					<FaGem />
+				</a>,
+				<a
+					className='techstackIcons'
+					href='/'
+					target='_blank'
+					rel='noopener noreferrer'>
+					<SiRubyonrails />
+				</a>,
+				<a
+					className='techstackIcons'
+					href='/'
+					target='_blank'
+					rel='noopener noreferrer'>
+					<SiWebpack />
+				</a>,
+				<a
+					className='techstackIcons'
+					href='/'
+					target='_blank'
+					rel='noopener noreferrer'>
+					<SiSass />
+				</a>,
+			],
 		},
 		{
 			src: betterPNG,
@@ -77,7 +106,7 @@ const ImageCarousel = ({ darkMode }) => {
 				{images.map((image, index) => (
 					<div key={index} className='carousel-slide'>
 						<img src={image.src} alt={image.title} />
-						<div className='overlay'>
+						<div className={`overlay ${darkMode ? 'dark-mode' : ''}`}>
 							<div className='tech-icons'>
 								{image.techStack.map((icon, idx) => (
 									<span key={idx}>{icon}</span>

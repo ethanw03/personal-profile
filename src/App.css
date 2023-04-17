@@ -19,3 +19,7 @@ body {
 .headerPage.dark {
 	color: #fff;
 }
+
+a[target='_blank'] {
+	color: inherit;
+}
