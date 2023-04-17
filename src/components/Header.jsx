@@ -13,7 +13,7 @@ function Header({ darkMode }) {
 				<Typewriter
 					options={{
 						strings: [
-							'Full-Stack Software Developer',
+							'Full-Stack Developer',
 							'Creative',
 							'Front-End Developer',
 							'Back-End Developer',

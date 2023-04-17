@@ -9,6 +9,7 @@
 }
 body {
 	background-color: #faf9f6;
+	overflow-x: hidden;
 }
 .App.dark {
 	background-color: #000;
