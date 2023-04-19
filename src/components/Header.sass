@@ -4,63 +4,45 @@
   font-family: 'Roboto Condensed', sans-serif
   position: relative
   
-
   h1
     font-size: 85px
-    text-shadow: .5px .5px .5px rgba(0, 0, 0, 0.4);
-
+    text-shadow: .5px .5px .5px rgba(0, 0, 0, 0.4)
+    
   h3
     font-size: 52px
     font-family: 'Libre Franklin', sans-serif
     
-    
-    
-
   h1, h3
     margin: 0
-
+    
   h1 + h1
     margin-top: -0.5rem
-
+    
   .buttonContainer
     display: flex
     position: absolute
     left: -11px
     margin-top: 90px
-
+    
     button
       background-color: #000000
       color: #ffffff
       border: none
       padding: .4rem 2.1rem
       margin: 0 0.9rem
-      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-      font-family: 'Libre Franklin', sans-serif;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4)
+      font-family: 'Libre Franklin', sans-serif
       cursor: pointer
       transition: background-color 0.3s, color 0.3s
       border-radius: .1rem
-
+      
       &:hover
         background-color: #333
 
 .headerContent
   position: absolute
-  
   top: 500px
   left: 130px
-
-.headerPage.dark
-  color: #fff
-
-.headerPage.dark button
-  background-color: white
-  color: #000
-
-  &:hover
-    background-color: #ccc
-
-
-
 .typeWriterText 
   font-size: 52px
   position: absolute
@@ -71,4 +53,69 @@
 .typeWriterCursor
   font-size: 52px
   white-space: nowrap
+  
+@media (max-width: 768px)
+  .headerContent
+    top: auto
+    left: auto
+    position: relative
+    margin-top: 80px
+    
+    h1
+      font-size: 72px
+      
+    h3
+      font-size: 42px
+      
+    .buttonContainer
+      margin-top: 40px
+      
+      button
+        margin: 10px 0
+        
+@media (max-width: 480px)
+  .headerPage
+    height: auto
+    padding: 20px
+    text-align: center
+    
+    h1
+      font-size: 48px
+      
+    h3
+      font-size: 32px
+      
+  .headerContent
+    margin-top: 80px
+    
+    .typeWriterText 
+      font-size: 36px
+      
+    .typeWriterCursor
+      font-size: 36px
+      
+    .buttonContainer
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: 40px
+      
+      button
+        margin: 10px 0
+        
+@media (max-width: 320px)
+  .headerContent
+    margin-top: 40px
+    
+    .typeWriterText 
+      font-size: 24px
+      
+    .typeWriterCursor
+      font-size: 24px
+      
+    .buttonContainer button
+      padding: 0.3rem 1.2rem
+      font-size: 14px
+      
+
   
