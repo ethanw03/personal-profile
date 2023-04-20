@@ -73,11 +73,12 @@
       button
         margin: 10px 0
         
-@media (max-width: 480px)
+@media only screen and (max-width: 768px) and (min-width: 391px)
   .headerPage
     height: auto
     padding: 20px
     text-align: center
+    height: 100vh
     
     h1
       font-size: 48px
@@ -103,12 +104,26 @@
       button
         margin: 10px 0
         
-@media (max-width: 320px)
+@media only screen and (max-width: 390px)
+  .headerPage
+    margin: 40px 40px 0 38px
+    h1
+      font-size: 42px
+      
+    h3
+      font-size: 24px
+
   .headerContent
-    margin-top: 40px
+    
+    
+    top: 250px
     
     .typeWriterText 
+      
       font-size: 24px
+      position: absolute
+      
+      
       
     .typeWriterCursor
       font-size: 24px

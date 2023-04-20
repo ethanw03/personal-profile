@@ -1,3 +1,4 @@
+/* Styles for all screen sizes */
 .app {
 	display: flex;
 	flex-direction: column;
@@ -7,10 +8,12 @@
 	font-family: 'Roboto Condensed', sans-serif;
 	min-height: 100vh;
 }
+
 body {
 	background-color: #faf9f6;
 	overflow-x: hidden;
 }
+
 .App.dark {
 	background-color: #000;
 	color: #fff;
@@ -22,4 +25,36 @@ body {
 
 a[target='_blank'] {
 	color: inherit;
+}
+
+@media only screen and (min-width: 1200px) {
+	/* Styles for devices with a screen width of 1200px or more */
+	.app {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 769px) {
+	/* Styles for devices with a screen width between 768px and 1199px */
+	.app {
+		max-width: 768px;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 768px) and (min-width: 391px) {
+	/* Styles for devices with a screen width between 390px and 768px */
+	.app {
+		max-width: 390px;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 390px) {
+	/* Styles for devices with a screen width of 390px or less */
+	.app {
+		max-width: 300px;
+		margin: 40px 40px 0 38px;
+	}
 }
