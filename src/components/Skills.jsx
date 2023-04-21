@@ -1,14 +1,6 @@
 import React from 'react';
 import './Skills.sass';
-import {
-	FaReact,
-	FaNodeJs,
-	FaDatabase,
-	FaGem,
-	FaGithub,
-	FaMocha,
-	FaChai,
-} from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaDatabase, FaGem, FaGithub } from 'react-icons/fa';
 
 import { DiCss3, DiHtml5 } from 'react-icons/di';
 

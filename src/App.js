@@ -6,7 +6,6 @@ import About from './components/about';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import MobileNav from './components/MobileNav';
 
 function App() {
 	const [darkMode, setDarkMode] = useState(false);
@@ -17,7 +16,6 @@ function App() {
 
 	return (
 		<div className={darkMode ? 'App dark' : 'App'}>
-			<MobileNav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 			<Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 			<Header darkMode={darkMode} />
 			<About darkMode={darkMode} />
