@@ -4,6 +4,7 @@
   position: relative
   left: 130px
   font-size: 52px
+  overflow-x: hidden
   
 
   .skillsContent
@@ -63,30 +64,74 @@
 @media only screen and (max-width: 390px)
   .skillsPage
     display: flex
-    
     left: 0px
+    flex-direction: column
+    align-items: left
     font-size: 35px
     padding: 20px
     text-align: center
 
   .skillsContent
-    margin-top: 80px
-    left: 100px
+    margin-top: 20px
     position: absolute
+    left: 100px
     
   .skillsText
     position: absolute
-    font-size: 26px
-    line-height: 40px
-    top: 200px
-   
+    display: flex
+    flex-direction: column
+    justify-content: center
+    font-size: 32px
+    top: 110px !important
+    left: 80px !important
+    line-height: 2 !important
+  
+  .iconContainer
+    display: flex
+    top: 150px !important
+    left: 15px !important
+    font-size: 32px !important
+    justify-content: center !important
+    align-content: center !important
+    
+
+
+
+  .languages
+    position: absolute
+    top: 340px !important
+    p
+      margin-right: 20px !important
+
+  .testing
+    position: absolute
+    top: 190px !important
+    p
+      margin-right: 20px !important
+
+  .frameworks
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: flex-end
+    position: absolute
+    top: 490px !important
+    line-height: 0 !important
+    max-width: 75%
+    p
+      margin-right: 20px !important
+      margin-bottom: 2px !important
+  .databases
+    position: absolute
+    top: 40px !important
+    
+    p
+      margin-right: 20px !important
+      
 
     
-  .iconContainer
-    top: 50px
-    left: 0px
-    
-    
+
+ 
  
 
   
