@@ -3,6 +3,7 @@
   height: 100vh
   font-family: 'Roboto Condensed', sans-serif
   position: relative
+  width: 100%
   
   h1
     font-size: 85px
@@ -63,16 +64,23 @@
   color: #000
   cursor: pointer
   transition: color 0.3s
+
+  display: none
+
   
   &:hover
     color: #333
+
   
-@media (max-width: 768px)
-  .headerContent
-    top: auto
-    left: auto
-    position: relative
-    margin-top: 80px
+ 
+  
+@media only screen and (max-width: 1440px) and (min-width: 1025px)
+  .headerPage
+    
+    height: auto
+    padding: 20px
+    text-align: center
+    height: 100vh
     
     h1
       font-size: 72px
@@ -80,33 +88,14 @@
     h3
       font-size: 42px
       
-    .buttonContainer
-      margin-top: 40px
-      
-      button
-        margin: 10px 0
-        
-@media only screen and (max-width: 768px) and (min-width: 391px)
-  .headerPage
-    height: auto
-    padding: 20px
-    text-align: center
-    height: 100vh
-    
-    h1
-      font-size: 48px
-      
-    h3
-      font-size: 32px
-      
   .headerContent
     margin-top: 80px
     
     .typeWriterText 
-      font-size: 36px
+      font-size: 48px
       
     .typeWriterCursor
-      font-size: 36px
+      font-size: 48px
       
     .buttonContainer
       display: flex
@@ -116,6 +105,69 @@
       
       button
         margin: 10px 0
+
+
+@media only screen and (max-width: 1024px) and (min-width: 769px)
+  .headerPage
+    height: auto
+    padding: 20px
+    text-align: center
+    height: 100vh
+    
+    h1
+      font-size: 72px
+      
+    h3
+      font-size: 42px
+      
+  .headerContent
+    margin-top: 80px
+    
+    .typeWriterText 
+      font-size: 48px
+      
+    .typeWriterCursor
+      font-size: 48px
+      
+    .buttonContainer
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: 40px
+      
+      button
+        margin: 10px 0
+
+@media only screen and (max-width: 768px) and (min-width: 391px)
+  .headerPage
+    margin: 0px 40px 0px 38px
+    height: 100vh
+    h1
+      font-size: 42px
+      
+    h3
+      font-size: 24px
+
+  .headerContent
+    
+    
+    top: 250px
+    
+    .typeWriterText 
+      
+      font-size: 24px
+      position: absolute
+      
+      
+      
+    .typeWriterCursor
+      font-size: 24px
+      
+    .buttonContainer 
+      button
+      padding: 0.3rem 1.2rem
+      font-size: 14px
+      display: none
         
 @media only screen and (max-width: 390px)
   .headerPage
@@ -142,7 +194,8 @@
     .typeWriterCursor
       font-size: 24px
       
-    .buttonContainer button
+    .buttonContainer 
+      button
       padding: 0.3rem 1.2rem
       font-size: 14px
       display: none
