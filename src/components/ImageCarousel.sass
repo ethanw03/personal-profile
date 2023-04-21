@@ -4,11 +4,11 @@
   align-items: center
   height: 100vh
   width: 100%
-  border-radius: 10px;
   
+  overflow-x: hidden
   .custom-carousel
     width: 50%
-
+    overflow-y: hidden
 .carousel-slide
   position: relative
   
@@ -79,26 +79,28 @@
   
 @media only screen and (max-width: 390px)
   .carousel-wrapper
-    width: 100%
-    height: 100vh
+    display: flex
     border-radius: 0px;
     
     .custom-carousel
       width: 100%
-      height: 100vh
 
     .overlay
       .tech-icons
         position: absolute
         top: 2.5rem
-        right: 1rem
-        font-size: 1.5rem
+        right: 1.3rem !important
+        font-size: 18px  !important
 
       .description
         width: 100%
-        margin-top: 1rem
-        font-size: 1.2rem
-        margin-top: 150px
+        margin-top: 2rem !important
+        font-size: .8rem !important
+        display: flex
+        flex-wrap: wrap
+        position: relative
+        left: 50px
+        max-width: 66% !important
 
       .title
         position: absolute
@@ -110,7 +112,7 @@
   .carousel-slide
     img
       width: 100%
-      height: 100vh
+      
 
     .overlay
       .tech-icons
@@ -127,8 +129,8 @@
 
       .title
         position: absolute
-        bottom: 1rem
-        left: 1rem
+        bottom: .2rem !important
+        left: 2rem !important
         font-size: 1.2rem
         font-weight: bold
 
@@ -140,6 +142,7 @@
       background-color: black
       border: 1px solid black
       box-shadow: none
+      
 
     .carousel-indicator-selected
       background-color: black
