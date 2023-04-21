@@ -49,7 +49,6 @@ function Contact() {
 			<div className='contactContent'>
 				<h1>CONTACT</h1>
 			</div>
-			<div className='holder'></div>
 			<div className='container'>
 				<div className='contact-info'>
 					<a className='iconlinks' href='#' target='_blank'>

@@ -1,14 +1,6 @@
 import React from 'react';
 import './Skills.sass';
-import {
-	FaReact,
-	FaNodeJs,
-	FaDatabase,
-	FaGem,
-	FaGithub,
-	FaMocha,
-	FaChai,
-} from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaDatabase, FaGem, FaGithub } from 'react-icons/fa';
 
 import { DiCss3, DiHtml5 } from 'react-icons/di';
 
@@ -32,13 +24,42 @@ function Skills({ darkMode }) {
 			<div className='skillsContent'>
 				<h1>SKILLS</h1>
 			</div>
-			<div className='iconNames'>
+			<div className='skillsText'>
 				<h3>Database/VC</h3>
 				<h3>Testing</h3>
 				<h3>Languages</h3>
 				<h3>Frameworks </h3>
 			</div>
 			<div className='iconContainer'>
+				<div className='databases'>
+					<a>
+						<p>
+							<FaDatabase href='/' target='_blank' />
+						</p>
+					</a>
+					<a>
+						<p>
+							<FaGithub href='/' target='_blank' />
+						</p>
+					</a>
+				</div>
+				<div className='testing '>
+					<a>
+						<p>
+							<SiStorybook href='/' target='_blank' />
+						</p>
+					</a>
+					<a>
+						<p>
+							<SiCypress href='/' target='_blank' />
+						</p>
+					</a>
+					<a>
+						<p>
+							<SiJest href='/' target='_blank' />
+						</p>
+					</a>
+				</div>
 				<div className='languages'>
 					<a>
 						<p>
@@ -61,23 +82,7 @@ function Skills({ darkMode }) {
 						</p>
 					</a>
 				</div>
-				<div className='testing '>
-					<a>
-						<p>
-							<SiStorybook href='/' target='_blank' />
-						</p>
-					</a>
-					<a>
-						<p>
-							<SiCypress href='/' target='_blank' />
-						</p>
-					</a>
-					<a>
-						<p>
-							<SiJest href='/' target='_blank' />
-						</p>
-					</a>
-				</div>
+
 				<div className='frameworks'>
 					<a>
 						<p>
@@ -123,18 +128,6 @@ function Skills({ darkMode }) {
 					<a>
 						<p>
 							<SiBootstrap href='/' target='_blank' />
-						</p>
-					</a>
-				</div>
-				<div className='databases'>
-					<a>
-						<p>
-							<FaDatabase href='/' target='_blank' />
-						</p>
-					</a>
-					<a>
-						<p>
-							<FaGithub href='/' target='_blank' />
 						</p>
 					</a>
 				</div>

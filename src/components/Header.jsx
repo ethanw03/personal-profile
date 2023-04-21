@@ -3,6 +3,7 @@ import './Header.sass';
 import { HideOn } from 'react-hide-on-scroll';
 import { Link } from 'react-scroll';
 import Typewriter from 'typewriter-effect';
+import { FaAngleDoubleDown } from 'react-icons/fa';
 
 function Header({ darkMode }) {
 	return (
@@ -62,6 +63,10 @@ function Header({ darkMode }) {
 						</Link>
 					</div>
 				</HideOn>
+
+				<div className='down'>
+					<FaAngleDoubleDown />
+				</div>
 			</div>
 		</div>
 	);
